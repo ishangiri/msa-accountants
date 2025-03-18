@@ -1,9 +1,13 @@
-import type { Metadata } from 'next';
-import './globals.css';
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
-export const metadata: Metadata = {
-  title: 'MSA Accountants',
-  description: 'Complete solutions for accounting, taxation, and business advisory services.',
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata = {
+  title: "MSA Accountants",
+  description: "Complete Solution for Accounting, Taxation & Business Advisory Services",
 };
 
 export default function RootLayout({
@@ -13,7 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={inter.className}>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
