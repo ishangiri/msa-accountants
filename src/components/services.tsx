@@ -2,10 +2,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Services() {
   const services = [
-    { title: "Taxation", icon: "📝", description: "Whether you are a start-up business or established company..." },
-    { title: "Accounting", icon: "🖥️", description: "Having accurate up-to-date accounting..." },
-    { title: "Business Advisory", icon: "💼", description: "Preparation of financial statements..." },
-    { title: "Services Overview", icon: "🔧", description: "Personal tax returns from $88, please..." },
+    { title: "Taxation", icon: "📝", description: "Whether you are a start-up business or established company...", link : "taxation" },
+    { title: "Accounting", icon: "🖥️", description: "Having accurate up-to-date accounting...", link : "accounting" },
+    { title: "Business Advisory", icon: "💼", description: "Preparation of financial statements...", link : "business"  },
+    { title: "Services Overview", icon: "🔧", description: "Personal tax returns from $88, please...", link : "services"},
   ];
 
   return (
@@ -23,7 +23,7 @@ export default function Services() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">{service.description}</p>
-                <a href="#" className="text-blue-600 hover:underline mt-4 inline-block">
+                <a href={service.link} className="text-blue-600 hover:underline mt-4 inline-block">
                   Read More
                 </a>
               </CardContent>
